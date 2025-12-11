@@ -9,14 +9,15 @@ Cypress E2E test suite using **Page Object Model (POM)** covering:
 Includes **Mochawesome HTML reporting** and stable handling of Stripe/WooPayments iframes.
 
 ## Project Structure
+
 cypress/
 ├── e2e/
 │   ├── flextable/
 │   │   └── flextable.cy.js          # All 9 FlexTable test cases
 │   └── woocommerce/
-│       └── woocommerce.cy.js        # WooCommerce checkout & order history
+│       └── woocommerce.cy.js        # WooCommerce checkout & order history scenarios
 ├── fixtures/
-│   └── user.json                    # Test user data
+│   └── user.json                    # Test user data and credentials
 ├── pages/
 │   └── woocommerce/
 │       ├── AddCart.js
@@ -30,13 +31,12 @@ cypress/
 │       ├── FlexDashboardPage.js
 │       ├── Frontend.js
 │       ├── LoginPage.js
-│       └── PluginsPage.js
+│       └── PluginsPage.js           # Page Object Model classes
 ├── support/
-│   ├── commands.js                  # Custom commands (fillStripeCard, etc.)
-│   └── e2e.js
-├── report/              # Generated HTML reports
-└── cypress.config.js
-
+│   ├── commands.js                  # Custom Cypress commands (fillStripeCard, pasteFromClipboard, etc.)
+│   └── e2e.js                       # Global hooks and configuration
+├── report/                          # Generated HTML reports (Mochawesome)
+└── cypress.config.js                # Cypress configuration (baseUrl, env vars, reporter)
 ## Completed Requirements
 
 ### Part A – FlexTable (All 9 Test Cases Done)
