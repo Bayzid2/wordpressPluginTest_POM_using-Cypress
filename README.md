@@ -10,6 +10,7 @@ Includes **Mochawesome HTML reporting** and stable handling of Stripe/WooPayment
 
 ## Project Structure
 
+```plaintext
 cypress/
 ├── e2e/
 │   ├── flextable/
@@ -37,6 +38,7 @@ cypress/
 │   └── e2e.js                       # Global hooks and configuration
 ├── report/                          # Generated HTML reports (Mochawesome)
 └── cypress.config.js                # Cypress configuration (baseUrl, env vars, reporter)
+```
 ## Completed Requirements
 
 ### Part A – FlexTable (All 9 Test Cases Done)
